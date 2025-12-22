@@ -3,10 +3,10 @@ import { Github, Linkedin, Twitter, Send, Mail, Globe, Calendar, MapPin } from "
 import { PageLayout } from "@/components/PageLayout";
 
 const socialLinks = [
-  { icon: Github, name: "GitHub", handle: "@aayushbharti", url: "https://github.com" },
-  { icon: Linkedin, name: "LinkedIn", handle: "in/iaayushbharti", url: "https://linkedin.com" },
-  { icon: Twitter, name: "Twitter / X", handle: "@iaayushbharti", url: "https://twitter.com" },
-  { icon: Send, name: "Telegram", handle: "@iaayushbharti", url: "https://t.me" },
+  { icon: Github, name: "GitHub", handle: "@Sarthakbhamare", url: "https://github.com/Sarthakbhamare" },
+  { icon: Linkedin, name: "LinkedIn", handle: "in/sarthak-bhamare-899148288", url: "https://www.linkedin.com/in/sarthak-bhamare-899148288/" },
+  { icon: Twitter, name: "Twitter / X", handle: "@sarthakbhamare", url: "https://twitter.com/sarthakbhamare" },
+  { icon: Send, name: "Telegram", handle: "@sarthakbhamare", url: "https://t.me/sarthakbhamare" },
 ];
 
 export default function LinksPage() {
@@ -19,12 +19,12 @@ export default function LinksPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             Network
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
+          <h1 className="text-4xl md:text-6xl font-instrument-serif mt-4">
             Connect With{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="italic animate-gradient-x">
               Me
             </span>
           </h1>
@@ -40,9 +40,9 @@ export default function LinksPage() {
           >
             <div className="text-center mb-6">
               <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 mb-4 flex items-center justify-center text-3xl font-bold text-background">
-                AB
+                SB
               </div>
-              <h2 className="text-xl font-serif">Aayush Bharti</h2>
+              <h2 className="text-xl font-instrument-serif">Sarthak Bhamare</h2>
               <div className="flex justify-center gap-2 mt-2">
                 <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground">Developer</span>
                 <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground">Freelancer</span>
@@ -56,7 +56,7 @@ export default function LinksPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
-                <span>hello@aayushbharti.in</span>
+                <span>Sarthakbhamare12@gmail.com</span>
               </div>
             </div>
 
@@ -86,7 +86,7 @@ export default function LinksPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="text-muted-foreground text-xs uppercase tracking-wider">Code & Craft</span>
+              <span className="text-muted-foreground text-xs uppercase tracking-wider font-mono">Code & Craft</span>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <a
                   href="https://github.com"
@@ -99,7 +99,7 @@ export default function LinksPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">GitHub</h3>
-                    <p className="text-sm text-muted-foreground">@aayushbharti</p>
+                    <p className="text-sm text-muted-foreground">@Sarthakbhamare</p>
                   </div>
                 </a>
                 <a
@@ -123,7 +123,7 @@ export default function LinksPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <span className="text-muted-foreground text-xs uppercase tracking-wider">Connect</span>
+              <span className="text-muted-foreground text-xs uppercase tracking-wider font-mono">Connect</span>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 {socialLinks.map((link, idx) => (
                   <a

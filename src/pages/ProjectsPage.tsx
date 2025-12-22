@@ -7,17 +7,17 @@ const projects = [
     id: "01",
     type: "Web App",
     title: "Next Ventures",
-    date: "Q1 2025",
+    date: "2024",
     description: "A space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-    tags: ["Next.js", "React", "Sanity CMS", "TypeScript", "Tailwind CSS"],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     color: "from-pink-500/20 to-purple-500/20",
   },
   {
     id: "02",
     type: "Mobile App",
     title: "Finote App",
-    date: "Q4 2025",
+    date: "2024",
     description: "An intuitive mobile companion for organizing your digital wallets and analyzing your financial health",
     image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&h=500&fit=crop",
     tags: ["Expo", "TypeScript", "Firebase", "Zustand", "Reanimated"],
@@ -27,7 +27,7 @@ const projects = [
     id: "03",
     type: "Web App",
     title: "Zenith Minds",
-    date: "2025",
+    date: "2024",
     description: "A platform connecting students and instructors for enhanced learning experiences",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop",
     tags: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
@@ -36,12 +36,22 @@ const projects = [
   {
     id: "04",
     type: "Web App",
-    title: "DevFlow",
+    title: "Snippix",
     date: "2024",
-    description: "A community-driven platform for developers to ask questions, share knowledge, and grow together",
+    description: "A platform for creating and sharing code snippets with a clean and intuitive design",
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Clerk"],
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
     color: "from-orange-500/20 to-red-500/20",
+  },
+  {
+    id: "05",
+    type: "Web App",
+    title: "StarForge",
+    date: "2024",
+    description: "An AI SaaS landing page showcasing modern UI/UX excellence. With sleek design and smooth animations, it delivers an engaging user experience and serves as an inspiring reference for developers and designers.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+    tags: ["React", "Vite", "Tailwind CSS", "parallax", "Vercel"],
+    color: "from-blue-500/20 to-cyan-500/20",
   },
 ];
 
@@ -55,12 +65,12 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             Case Studies
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
+          <h1 className="text-4xl md:text-6xl font-instrument-serif mt-4">
             Curated{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="italic animate-gradient-x">
               Work
             </span>
           </h1>
@@ -87,14 +97,14 @@ export default function ProjectsPage() {
                   </span>
                 </div>
                 
-                <h2 className="text-3xl font-serif">{project.title}</h2>
+                <h2 className="text-3xl font-instrument-serif">{project.title}</h2>
                 <p className="text-muted-foreground">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-xs rounded-full bg-secondary/50 text-secondary-foreground"
+                      className="px-3 py-1 text-xs rounded-full bg-secondary/50 text-secondary-foreground font-mono"
                     >
                       {tag}
                     </span>

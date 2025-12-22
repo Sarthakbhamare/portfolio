@@ -51,12 +51,12 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             More About Me
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
-            I'm Aayush, a creative{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+          <h1 className="text-4xl md:text-6xl font-instrument-serif mt-4">
+            I'm Sarthak, a creative{" "}
+            <span className="italic animate-gradient-x">
               engineer
             </span>
           </h1>
@@ -71,7 +71,7 @@ export default function AboutPage() {
             className="space-y-6"
           >
             <p className="text-muted-foreground leading-relaxed">
-              I'm Aayush Bharti, a proactive full-stack developer passionate about creating dynamic web experiences. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans React, Next.js, and Node.js, and I'm always eager to learn more.
+              I'm Sarthak Bhamare, a proactive full-stack developer passionate about creating dynamic web experiences. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans React, Next.js, and Node.js, and I'm always eager to learn more.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               When I'm not immersed in work, I'm exploring new ideas and staying curious. Life's about balance, and I love embracing every part of it.
@@ -126,12 +126,12 @@ export default function AboutPage() {
           transition={{ delay: 0.4 }}
           className="mb-20"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             The Experience
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif mt-4 mb-12">
+          <h2 className="text-3xl md:text-5xl font-instrument-serif mt-4 mb-12">
             Experience That Brings{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="italic animate-gradient-x">
               Ideas to Life
             </span>
           </h2>

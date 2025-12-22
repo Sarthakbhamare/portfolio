@@ -12,20 +12,20 @@ export const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-xs uppercase tracking-widest text-muted-foreground mb-4 block">
+          <span className="text-xs uppercase tracking-widest text-muted-foreground mb-4 block font-mono">
             Know About Me
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-instrument-serif mb-6">
             Full-Stack Developer
             <br />
-            <span className="text-muted-foreground text-2xl md:text-3xl">
+            <span className="text-muted-foreground text-2xl md:text-3xl italic animate-gradient-x">
               and a little bit of everything
             </span>
           </h2>
 
           <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
             <p>
-              I'm Aayush Bharti, a proactive full-stack developer passionate about
+              I'm Sarthak Bhamare, a proactive full-stack developer passionate about
               creating dynamic web experiences. From frontend to backend, I thrive
               on solving complex problems with clean, efficient code.
             </p>
@@ -89,14 +89,14 @@ export const About = () => {
             
             {/* Logo overlay */}
             <div className="absolute top-8 left-8 w-16 h-16 rounded-2xl bg-foreground text-background flex items-center justify-center font-bold text-2xl z-10">
-              AB
+              SB
             </div>
 
             {/* Main image */}
             <div className="relative rounded-3xl overflow-hidden glass-card">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face"
-                alt="Aayush Bharti"
+                alt="Sarthak Bhamare"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />

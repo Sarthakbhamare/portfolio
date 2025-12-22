@@ -26,7 +26,7 @@ export const ServicesMarquee = () => {
 
   return (
     <section className="py-12 overflow-hidden">
-      <div className="flex gap-4 animate-marquee" style={{ animationDuration: "40s" }}>
+      <div className="flex gap-4 animate-marquee" style={{ animationDuration: "35s" }}>
         {duplicatedServices.map((service, index) => (
           <div
             key={`${service.title}-${index}`}

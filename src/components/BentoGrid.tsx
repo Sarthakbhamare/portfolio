@@ -20,9 +20,20 @@ const itemVariants = {
   },
 };
 
+const techIcons = [
+  { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+  { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+  { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+  { name: "Motion.dev", icon: "https://cdn.simpleicons.org/framer/0055FF" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+  { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
+  { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws/FFFFFF" },
+];
+
 export const BentoGrid = () => {
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
+    <section className="py-24 px-4 max-w-7xl mx-auto">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -64,22 +75,32 @@ export const BentoGrid = () => {
           </div>
         </motion.div>
 
-        {/* Tech Passion Card - spans 2 columns */}
+        {/* Tech Passion Card - spans 2 columns with tech grid inside */}
         <motion.div
           variants={itemVariants}
           className="glass-card p-6 md:p-8 md:col-span-2"
         >
-          <h3 className="text-xl font-semibold mb-4">
-            Passionate about cutting-edge technologies
+          <h3 className="text-xl font-semibold mb-6">
+            Passionate about cutting-edge<br />technologies
           </h3>
-          <div className="flex flex-wrap gap-2">
-            {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "MongoDB", "AWS"].map((tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1.5 rounded-full bg-secondary/50 text-sm text-muted-foreground"
+          
+          {/* Tech icons grid inside the card */}
+          <div className="grid grid-cols-4 gap-3">
+            {techIcons.map((tech) => (
+              <motion.div
+                key={tech.name}
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center gap-2 group cursor-pointer"
               >
-                {tech}
-              </span>
+                <div className="w-12 h-12 rounded-lg bg-secondary/40 flex items-center justify-center group-hover:bg-secondary/60 transition-colors">
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className="w-6 h-6"
+                  />
+                </div>
+                <span className="text-xs text-muted-foreground text-center">{tech.name}</span>
+              </motion.div>
             ))}
           </div>
         </motion.div>
@@ -91,7 +112,7 @@ export const BentoGrid = () => {
         >
           <div>
             <span className="text-xs text-muted-foreground uppercase tracking-wider">
-              aayushbharti.in
+              sarthakbhamare.in
             </span>
             <h3 className="text-2xl font-semibold mt-2">
               Websites that{" "}
@@ -144,7 +165,7 @@ export const BentoGrid = () => {
             <p className="text-muted-foreground text-sm mb-2">
               Let's work together on your next project
             </p>
-            <p className="text-foreground font-medium">hello@aayushbharti.in</p>
+            <p className="text-foreground font-medium">Sarthakbhamare12@gmail.com</p>
           </div>
           <a
             href="#contact"

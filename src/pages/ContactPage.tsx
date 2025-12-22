@@ -12,12 +12,12 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             Get In Touch
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
+          <h1 className="text-4xl md:text-6xl font-instrument-serif mt-4">
             Let's Work{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="italic animate-gradient-x">
               Together
             </span>
           </h1>
@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
-                <p className="font-medium">hello@aayushbharti.in</p>
+                <p className="font-medium">Sarthakbhamare12@gmail.com</p>
               </div>
             </div>
 

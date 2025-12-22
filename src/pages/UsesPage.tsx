@@ -55,12 +55,12 @@ export default function UsesPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             The Gear
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
+          <h1 className="text-4xl md:text-6xl font-instrument-serif mt-4">
             What Powers{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="italic animate-gradient-x">
               My Work
             </span>
           </h1>
@@ -74,8 +74,8 @@ export default function UsesPage() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-muted-foreground text-sm">01</span>
-            <h2 className="text-2xl font-serif">Workstation</h2>
+            <span className="text-muted-foreground text-sm font-mono">01</span>
+            <h2 className="text-2xl font-instrument-serif">Workstation</h2>
           </div>
 
           <div className="glass-card p-6 md:p-8">
@@ -86,7 +86,7 @@ export default function UsesPage() {
                 className="w-full h-64 object-cover rounded-xl"
               />
               <div>
-                <h3 className="text-2xl font-serif">{workstation.name}</h3>
+                <h3 className="text-2xl font-instrument-serif">{workstation.name}</h3>
                 <p className="text-muted-foreground mt-2">{workstation.specs}</p>
                 <span className="inline-block mt-3 px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground">
                   {workstation.color}
@@ -104,8 +104,8 @@ export default function UsesPage() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-muted-foreground text-sm">02</span>
-            <h2 className="text-2xl font-serif">Development</h2>
+            <span className="text-muted-foreground text-sm font-mono">02</span>
+            <h2 className="text-2xl font-instrument-serif">Development</h2>
           </div>
 
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
@@ -132,8 +132,8 @@ export default function UsesPage() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-muted-foreground text-sm">03</span>
-            <h2 className="text-2xl font-serif">VSCode Extensions</h2>
+            <span className="text-muted-foreground text-sm font-mono">03</span>
+            <h2 className="text-2xl font-instrument-serif">VSCode Extensions</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
@@ -161,8 +161,8 @@ export default function UsesPage() {
           transition={{ delay: 0.4 }}
         >
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-muted-foreground text-sm">04</span>
-            <h2 className="text-2xl font-serif">Tech Stack</h2>
+            <span className="text-muted-foreground text-sm font-mono">04</span>
+            <h2 className="text-2xl font-instrument-serif">Tech Stack</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">

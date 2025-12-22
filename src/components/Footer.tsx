@@ -39,16 +39,16 @@ export const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-mono">
             From Concept to Creation
           </p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-instrument-serif mb-8">
             LET'S MAKE IT{" "}
-            <span className="font-serif italic text-gradient">HAPPEN!</span>
+            <span className="italic animate-gradient-x">HAPPEN!</span>
           </h2>
 
           <a
-            href="mailto:hello@aayushbharti.in"
+            href="mailto:Sarthakbhamare12@gmail.com"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-foreground text-background font-medium text-lg hover:bg-foreground/90 transition-all duration-300 hover:scale-105 group mb-8"
           >
             Get In Touch
@@ -64,29 +64,66 @@ export const Footer = () => {
         </motion.div>
 
         {/* Footer links */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2025 Aayush Bharti. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <a
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Privacy
-            </a>
-            <a
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Terms
-            </a>
-            <a
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Sitemap
-            </a>
+        <div className="mt-16 pt-8 border-t border-border">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">General</p>
+              <div className="space-y-2">
+                <a href="/" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                <a href="/about" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">About</a>
+                <a href="/projects" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+                <a href="/blog" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">Specifics</p>
+              <div className="space-y-2">
+                <a href="/guestbook" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Guest Book</a>
+                <a href="/bucket-list" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Bucket List</a>
+                <a href="/uses" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Uses</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">More</p>
+              <div className="space-y-2">
+                <a href="/contact" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Book a call</a>
+                <a href="/links" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Links</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">Attribution</p>
+              <div className="space-y-2">
+                <a href="#" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+                <a href="#" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Terms of Use</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">Socials</p>
+              <div className="space-y-2">
+                <a href="https://linkedin.com/in/sarthak-bhamare-899148288/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
+                <a href="https://github.com/Sarthakbhamare" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">Twitter</a>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4 border-t border-border">
+            <p className="text-sm text-muted-foreground">
+              © 2025 Sarthak Bhamare. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <a
+                href="#"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Terms of Use
+              </a>
+            </div>
           </div>
         </div>
       </div>

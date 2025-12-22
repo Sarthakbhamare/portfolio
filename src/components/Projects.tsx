@@ -67,11 +67,11 @@ export const Projects = () => {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <span className="text-xs uppercase tracking-widest text-muted-foreground mb-4 block">
+        <span className="text-xs uppercase tracking-widest text-muted-foreground mb-4 block font-mono">
           Case Studies
         </span>
-        <h2 className="text-4xl md:text-5xl font-bold">
-          Curated <span className="font-serif italic text-gradient">work</span>
+        <h2 className="text-4xl md:text-5xl font-instrument-serif">
+          Curated <span className="italic animate-gradient-x">Work</span>
         </h2>
       </motion.div>
 
@@ -94,11 +94,11 @@ export const Projects = () => {
               <div className={`flex flex-col justify-between ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-bold text-muted-foreground/30">
+                    <span className="text-5xl font-bold text-muted-foreground/30 font-mono">
                       {project.id}
                     </span>
                     <div>
-                      <span className="text-xs uppercase tracking-wider text-muted-foreground block">
+                      <span className="text-xs uppercase tracking-wider text-muted-foreground block font-mono">
                         {project.type}
                       </span>
                       <span className="text-sm text-muted-foreground">
@@ -107,7 +107,7 @@ export const Projects = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-4 group-hover:text-gradient transition-all">
+                  <h3 className="text-2xl md:text-3xl font-instrument-serif mb-4 group-hover:text-gradient transition-all">
                     {project.title}
                   </h3>
 
@@ -119,7 +119,7 @@ export const Projects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 rounded-full bg-secondary/50 text-xs text-muted-foreground"
+                        className="px-3 py-1 rounded-full bg-secondary/50 text-xs text-muted-foreground font-mono"
                       >
                         {tag}
                       </span>

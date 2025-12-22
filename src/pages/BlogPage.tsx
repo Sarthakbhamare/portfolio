@@ -62,12 +62,12 @@ export default function BlogPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             The Pensieve
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
+          <h1 className="text-4xl md:text-6xl font-instrument-serif mt-4">
             Handpicked{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="italic animate-gradient-x">
               Insights
             </span>
           </h1>
@@ -81,8 +81,8 @@ export default function BlogPage() {
             className="space-y-8"
           >
             <div>
-              <span className="text-muted-foreground text-xs uppercase tracking-wider">Explore</span>
-              <h2 className="text-2xl font-serif mt-2">Library</h2>
+              <span className="text-muted-foreground text-xs uppercase tracking-wider font-mono">Explore</span>
+              <h2 className="text-2xl font-instrument-serif mt-2">Library</h2>
               <p className="text-sm text-muted-foreground mt-1">Showing {filteredPosts.length} posts</p>
             </div>
 
@@ -100,7 +100,7 @@ export default function BlogPage() {
 
             {/* Topics */}
             <div>
-              <span className="text-muted-foreground text-xs uppercase tracking-wider">Topics</span>
+              <span className="text-muted-foreground text-xs uppercase tracking-wider font-mono">Topics</span>
               <div className="flex flex-wrap gap-2 mt-3">
                 {topics.map((topic) => (
                   <button
@@ -132,7 +132,7 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-[1fr_200px] gap-6">
                   <div className="space-y-3">
                     <span className="text-sm text-muted-foreground">{post.date}</span>
-                    <h3 className="text-xl font-serif group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-instrument-serif group-hover:text-primary transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-muted-foreground text-sm line-clamp-2">

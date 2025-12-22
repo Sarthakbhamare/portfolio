@@ -21,12 +21,12 @@ export default function GuestbookPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground text-sm tracking-[0.2em] uppercase font-mono">
             The Community Wall
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif mt-4">
+          <h1 className="text-4xl md:text-6xl font-instrument-serif mt-4">
             Leave{" "}
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <span className="italic animate-gradient-x">
               Your Mark
             </span>
           </h1>
@@ -39,7 +39,7 @@ export default function GuestbookPage() {
           transition={{ delay: 0.1 }}
           className="glass-card p-8 text-center mb-12 max-w-md mx-auto"
         >
-          <h3 className="text-xl font-serif italic mb-2">"Join the wall..."</h3>
+          <h3 className="text-xl font-instrument-serif italic mb-2">"Join the wall..."</h3>
           <p className="text-muted-foreground text-sm mb-6">
             Sign in to pin your message to this board forever.
           </p>

@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Aayush is an artist with code. We went from 'I want something high-tech and fast' to a fully built, high-ranking website in just over a week.",
+    quote: "Sarthak is an artist with code. We went from 'I want something high-tech and fast' to a fully built, high-ranking website in just over a week.",
     name: "Michael Davis",
     role: "Founder/CTO",
     company: "Apex Consulting",
@@ -31,7 +31,7 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
   {
-    quote: "His JavaScript/React web UI programming skills are through the roof. If Aayush says he can deliver a project, rest assured it will be awesome.",
+    quote: "His JavaScript/React web UI programming skills are through the roof. If Sarthak says he can deliver a project, rest assured it will be awesome.",
     name: "Chris Taylor",
     role: "Chairperson",
     company: "Core Fitness Club",
@@ -73,13 +73,13 @@ export const Testimonials = () => {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="text-xs uppercase tracking-widest text-muted-foreground mb-4 block">
+        <span className="text-xs uppercase tracking-widest text-muted-foreground mb-4 block font-mono">
           Testimonials
         </span>
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-4xl md:text-5xl font-instrument-serif">
           Word on the street
           <br />
-          <span className="font-serif italic text-gradient">about me</span>
+          <span className="italic animate-gradient-x">about me</span>
         </h2>
       </motion.div>
 
