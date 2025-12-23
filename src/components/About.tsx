@@ -95,7 +95,7 @@ export const About = () => {
             {/* Main image */}
             <div className="relative rounded-3xl overflow-hidden glass-card">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face"
+                src="/assets/profile pic.jpg"
                 alt="Sarthak Bhamare"
                 className="w-full h-full object-cover"
               />

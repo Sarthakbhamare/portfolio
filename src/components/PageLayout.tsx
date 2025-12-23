@@ -9,7 +9,7 @@ interface PageLayoutProps {
 
 export const PageLayout = ({ children }: PageLayoutProps) => {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen bg-background relative">
       {/* Background texture */}
       <div
         className="fixed inset-0 opacity-20 pointer-events-none"

@@ -72,9 +72,9 @@ export const Skills = () => {
         }
       });
 
-      // Flower rotation (720 degrees for smoother rotation)
+      // Flower rotation (360 degrees - slower than before)
       tl.to(flowerRef.current, {
-        rotation: 720,
+        rotation: 360,
         ease: "none",
       }, 0);
 
@@ -149,7 +149,7 @@ export const Skills = () => {
             }}
           >
             <img
-              src="/assets/flower.png"
+              src="/assets/download.webp"
               alt="Secret Sauce Flower"
               className="w-full h-full object-contain"
               loading="eager"

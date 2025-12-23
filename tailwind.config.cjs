@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
@@ -14,8 +13,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['Instrument Serif', 'Playfair Display', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,6 +60,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        white: {
+          '1': '#FAFAFA',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -92,6 +94,10 @@ export default {
           from: { opacity: "0", transform: "translateX(20px)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
+        "gradient-animation": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -100,8 +106,9 @@ export default {
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "slide-in-right": "slide-in-right 0.5s ease-out forwards",
+        "gradient-animation": "gradient-animation 8s ease infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};

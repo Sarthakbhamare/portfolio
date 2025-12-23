@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Command, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { CommandPalette } from "./CommandPalette";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -20,9 +21,12 @@ const moreItems = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [hovered, setHovered] = useState<string | null>(null);
+  const [commandOpen, setCommandOpen] = useState(false);
   const location = useLocation();
 
   const isActive = (href: string) => location.pathname === href;
+  const activeItem = hovered ?? location.pathname ?? "/";
 
   return (
     <>
@@ -46,35 +50,61 @@ export const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-max"
+      className="fixed top-2.5 md:top-4 inset-x-0 flex justify-center z-50 pointer-events-none"
     >
-      <nav className="glass rounded-full px-4 py-2 flex items-center justify-center gap-1" style={{ background: "rgba(80,80,80,0.4)", backdropFilter: "blur(10px)" }}>
+      <nav className="rounded-[22px] bg-white/60 dark:bg-white/10 backdrop-blur-2xl shadow-border px-1 py-1 flex items-center justify-center gap-1 whitespace-nowrap pointer-events-auto">
         {/* Desktop Nav - All items in one pill */}
-        <div className="hidden md:flex items-center gap-0">
+        <div className="hidden md:flex items-center gap-0 relative">
           {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${
-                isActive(item.href)
-                  ? "text-foreground bg-secondary/50"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/30"
-              }`}
-            >
-              {item.name}
-            </Link>
+            <div key={item.name} className="relative">
+              <motion.button
+                onMouseEnter={() => setHovered(item.href)}
+                onMouseLeave={() => setHovered(null)}
+                className="relative px-4 py-2 rounded-full text-sm font-medium z-10"
+              >
+                {activeItem === item.href && (
+                  <motion.span
+                    layoutId="nav-pill"
+                    className="absolute inset-0 rounded-full bg-secondary/50"
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  />
+                )}
+                <Link
+                  to={item.href}
+                  className={`relative z-10 block transition-colors ${
+                    activeItem === item.href
+                      ? "text-foreground font-semibold"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </motion.button>
+            </div>
           ))}
 
           {/* More dropdown */}
           <div className="relative">
-            <button
+            <motion.button
+              onMouseEnter={() => setHovered("more")}
+              onMouseLeave={() => setHovered(null)}
               onClick={() => setMoreOpen(!moreOpen)}
-              onBlur={() => setTimeout(() => setMoreOpen(false), 150)}
-              className="px-4 py-2 rounded-full text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/30 transition-all duration-300 flex items-center gap-1"
+              className="relative px-4 py-2 rounded-full text-sm font-medium z-10"
             >
-              More
-              <ChevronDown className={`w-4 h-4 transition-transform ${moreOpen ? "rotate-180" : ""}`} />
-            </button>
+              {activeItem === "more" && (
+                <motion.span
+                  layoutId="nav-pill"
+                  className="absolute inset-0 rounded-full bg-secondary/50"
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+              <span className={`relative z-10 flex items-center gap-1 transition-colors ${
+                activeItem === "more" ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
+              }`}>
+                More
+                <ChevronDown className={`w-4 h-4 transition-transform ${moreOpen ? "rotate-180" : ""}`} />
+              </span>
+            </motion.button>
             
             <AnimatePresence>
               {moreOpen && (
@@ -103,13 +133,32 @@ export const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          {/* Book a Call - same level as others */}
-          <Link
-            to="/contact"
-            className="px-4 py-2 rounded-full text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/30 transition-all duration-300 whitespace-nowrap"
-          >
-            Book a Call
-          </Link>
+          {/* Book a Call */}
+          <div className="relative">
+            <motion.button
+              onMouseEnter={() => setHovered("contact")}
+              onMouseLeave={() => setHovered(null)}
+              className="relative px-4 py-2 rounded-full text-sm font-medium z-10 whitespace-nowrap"
+            >
+              {activeItem === "contact" && (
+                <motion.span
+                  layoutId="nav-pill"
+                  className="absolute inset-0 rounded-full bg-secondary/50"
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+              <Link
+                to="/contact"
+                className={`relative z-10 block transition-colors ${
+                  activeItem === "contact" || isActive("/contact")
+                    ? "text-foreground font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Book a Call
+              </Link>
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile menu button - outside nav */}
@@ -177,6 +226,7 @@ export const Navbar = () => {
 
     {/* Corner Command button - FAR RIGHT */}
     <motion.button
+      onClick={() => setCommandOpen(true)}
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -186,6 +236,9 @@ export const Navbar = () => {
     >
       <Command className="w-4 h-4" />
     </motion.button>
+
+    {/* Command Palette */}
+    <CommandPalette isOpen={commandOpen} onClose={() => setCommandOpen(false)} />
     </>
   );
 };
