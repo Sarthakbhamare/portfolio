@@ -103,7 +103,7 @@ export const BentoGrid = () => {
           <div className="relative z-10 flex flex-col items-center mt-4">
             <div className="w-20 h-20 rounded-full border-2 border-purple-500/50 p-1 mb-4 relative">
               <img
-                src="/assets/profile pic.jpg"
+                src="/portfolio/assets/profile pic.jpg"
                 alt="Profile"
                 className="w-full h-full rounded-full bg-gray-800 object-cover"
               />

@@ -71,7 +71,7 @@ export const Hero = () => {
           <span>Hello, I'm Sarthak Bhamare</span>
           <div className="relative">
             <img
-              src="/assets/profile pic.jpg"
+              src="/portfolio/assets/profile pic.jpg"
               alt="Sarthak Bhamare"
               className="w-12 h-12 rounded-full object-cover border-2 border-border"
             />
@@ -93,7 +93,7 @@ export const Hero = () => {
           >
             <div className="relative w-6 h-6 rounded-full overflow-hidden border border-white/20">
               <img 
-                src="/assets/profile pic.jpg" 
+                src="/portfolio/assets/profile pic.jpg" 
                 alt="Sarthak" 
                 className="w-full h-full object-cover"
               />

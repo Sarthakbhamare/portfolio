@@ -149,7 +149,7 @@ export const Skills = () => {
             }}
           >
             <img
-              src="/assets/download.webp"
+              src="/portfolio/assets/download.webp"
               alt="Secret Sauce Flower"
               className="w-full h-full object-contain"
               loading="eager"
